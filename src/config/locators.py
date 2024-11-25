@@ -6,6 +6,7 @@ class BasePageLocators:
         "xpath",
         "//a[@href='/' and contains(@class, 'AppHeader')]",
     )
+    LOGO_LINK: tuple[str, str] = ("xpath", "//a[@class='active']")
 
 
 class MainPageLocators:
@@ -66,3 +67,12 @@ class ForgotPasswordPageLocators:
     """Локаторы страницы ForgotPasswordPage"""
 
     LOGIN_LINK: tuple[str, str] = ("xpath", "//a[@href='/login']")
+
+
+class AccountProfilePageLocators:
+    """Локаторы страницы AccountProfilePage"""
+
+    EXIT_BUTTON: tuple[str, str] = (
+        "xpath",
+        "//button[contains(text(), 'Выход')]",
+    )
