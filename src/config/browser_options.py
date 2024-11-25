@@ -9,6 +9,8 @@ class BrowsersOptions:
     def chrome_options() -> ChromeOptions:
         """Настройки запуска Chrome"""
         opt = ChromeOptions()
+        opt.add_argument("--window-size=1920,1080")
+        opt.add_argument("--blink-settings=imagesEnabled=false")
         opt.add_argument("--headless")
         return opt
 
@@ -16,5 +18,6 @@ class BrowsersOptions:
     def firefox_options() -> FirefoxOptions:
         """Настройки запуска Firefox"""
         opt = FirefoxOptions()
+        opt.add_argument("--window-size=1920,1080")
         opt.add_argument("--headless")
         return opt
