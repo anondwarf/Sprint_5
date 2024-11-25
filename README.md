@@ -22,6 +22,15 @@ UI тестирование сайта [stellarburgers.nomoreparties.site](https
       - [`test_password_input_bad_notice`](#test_password_input_bad_notice)
       - [`test_password_input_bad_input`](#test_password_input_bad_input)
       - [`test_registration`](#test_registration)
+    - [`TestRedirectNotAuth`](#testredirectnotauth)
+      - [`test_main_page_login_account_button`](#test_main_page_login_account_button)
+      - [`test_base_page_account_link`](#test_base_page_account_link)
+      - [`test_registration_page_login_link`](#test_registration_page_login_link)
+      - [`test_forgot_password_login_link`](#test_forgot_password_login_link)
+    - [`TestRedirectAuth`](#testredirectauth)
+      - [`test_main_page_login_link`](#test_main_page_login_link)
+      - [`test_account_profile_page_constructor_link`](#test_account_profile_page_constructor_link)
+      - [`test_account_profile_page_logo`](#test_account_profile_page_logo)
 
 ## Запуск проекта
 
@@ -105,3 +114,39 @@ UI тестирование сайта [stellarburgers.nomoreparties.site](https
 #### `test_registration`
 
 Тест регистрации на сайте
+
+### `TestRedirectNotAuth`
+
+Тесты не авторизированного пользователя
+
+#### `test_main_page_login_account_button`
+
+Тест проверяющий переход с главной страницы на страницу авторизации по кнопке "Войти в аккаунт"
+
+#### `test_base_page_account_link`
+
+Проверка перехода по ссылке из шапки сайта "Личный кабинет"
+
+#### `test_registration_page_login_link`
+
+Проверка перехода по ссылке "Войти" на страницу регистрации
+
+#### `test_forgot_password_login_link`
+
+Проверка перехода по ссылке "Войти" на странице восстановления пароля
+
+### `TestRedirectAuth`
+
+Тесты авторизированного пользователя
+
+#### `test_main_page_login_link`
+
+Проверка перехода в личный кабинет по ссылке "Личный кабинет" в шапке сайта
+
+#### `test_account_profile_page_constructor_link`
+
+Проверка перехода по ссылке "Конструктор" со страницы профиля, на главную страницу
+
+#### `test_account_profile_page_logo`
+
+Проверка перехода по ссылке из лого в шапке сайта со страницы профиля аккаунта на главную страницу
