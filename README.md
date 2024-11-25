@@ -15,6 +15,13 @@ UI тестирование сайта [stellarburgers.nomoreparties.site](https
     - [`src/utils`](#srcutils)
     - [`tests`](#tests)
   - [Реализованные тесты](#реализованные-тесты)
+    - [`TestRegistration`](#testregistration)
+      - [`test_name_input`](#test_name_input)
+      - [`test_email_input`](#test_email_input)
+      - [`test_password_input_good`](#test_password_input_good)
+      - [`test_password_input_bad_notice`](#test_password_input_bad_notice)
+      - [`test_password_input_bad_input`](#test_password_input_bad_input)
+      - [`test_registration`](#test_registration)
 
 ## Запуск проекта
 
@@ -51,12 +58,50 @@ UI тестирование сайта [stellarburgers.nomoreparties.site](https
 
 ### `src/base`
 
+Классы конструкторы для классов `Page` & `Test`
+
 ### `src/config`
+
+Конфигурация тестов и браузеров
 
 ### `src/pages`
 
+Классы страниц проекта
+
 ### `src/utils`
+
+Дополнительные классы помогающие в тестировании, например генерация тестовых данных
 
 ### `tests`
 
+Классы тестов
+
 ## Реализованные тесты
+
+### `TestRegistration`
+
+Тесты на странице регистрации
+
+#### `test_name_input`
+
+Проверка возможности ввести имя
+
+#### `test_email_input`
+
+Проверка ввести email
+
+#### `test_password_input_good`
+
+Проверка возможности ввести пароль (более 7 символов)
+
+#### `test_password_input_bad_notice`
+
+Проверка, что при вводе пароля, менее 7 символов, появляется текстовое уведомление об ошибке
+
+#### `test_password_input_bad_input`
+
+Проверка, что при вводе пароля, менее 7 символов, `div` имеет класс `error`
+
+#### `test_registration`
+
+Тест регистрации на сайте
