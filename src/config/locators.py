@@ -16,6 +16,24 @@ class MainPageLocators:
         "xpath",
         "//button[contains(text(), 'Войти')]",
     )
+    BREAD_TAB: tuple[str, str] = ("xpath", "//div[contains(@class, 'tab')][1]")
+    SAUCES_TAB: tuple[str, str] = (
+        "xpath",
+        "//div[contains(@class, 'tab')][2]",
+    )
+    TOPPINGS_TAB: tuple[str, str] = (
+        "xpath",
+        "//div[contains(@class, 'tab')][3]",
+    )
+    BREAD_TITLE: tuple[str, str] = ("xpath", "//h2[contains(text(), 'Булки')]")
+    SAUCES_TITLE: tuple[str, str] = (
+        "xpath",
+        "//h2[contains(text(), 'Соусы')]",
+    )
+    TOPPINGS_TITLE: tuple[str, str] = (
+        "xpath",
+        "//h2[contains(text(), 'Начинки')]",
+    )
 
 
 class LoginPageLocators:
