@@ -1,6 +1,7 @@
 from .browser_options import BrowsersOptions
 from .links import Links
 from .locators import (
+    AccountProfilePageLocators,
     BasePageLocators,
     ForgotPasswordPageLocators,
     LoginPageLocators,
@@ -16,4 +17,5 @@ __all__ = [
     "LoginPageLocators",
     "RegistrationPageLocators",
     "ForgotPasswordPageLocators",
+    "AccountProfilePageLocators",
 ]
