@@ -1,13 +1,31 @@
 class BasePageLocators:
     """Локаторы BasePage"""
 
+    ACCOUNT_LINK: tuple[str, str] = ("xpath", "//a[@href='/account']")
+    CONSTRUCTOR_LINK: tuple[str, str] = (
+        "xpath",
+        "//a[@href='/' and contains(@class, 'AppHeader')]",
+    )
+
 
 class MainPageLocators:
     """Локаторы MainPage"""
 
+    LOGIN_ACCOUNT_BUTTON: tuple[str, str] = (
+        "xpath",
+        "//button[contains(text(), 'Войти')]",
+    )
+
 
 class LoginPageLocators:
     """Локаторы LoginPage"""
+
+    LOGIN_INPUT: tuple[str, str] = ("xpath", "//input[@type='text']")
+    PASSWORD_INPUT: tuple[str, str] = ("xpath", "//input[@type='password']")
+    LOGIN_BUTTON: tuple[str, str] = (
+        "xpath",
+        "//button[contains(@class, 'button')]",
+    )
 
 
 class RegistrationPageLocators:
@@ -42,3 +60,9 @@ class RegistrationPageLocators:
         "xpath",
         "//p[contains(@class, 'error')]",
     )
+
+
+class ForgotPasswordPageLocators:
+    """Локаторы страницы ForgotPasswordPage"""
+
+    LOGIN_LINK: tuple[str, str] = ("xpath", "//a[@href='/login']")
