@@ -36,6 +36,14 @@ UI тестирование сайта [stellarburgers.nomoreparties.site](https
 
 ## Запуск проекта
 
+```bash
+poetry run pytest -n auto tests
+```
+
+```bash
+pytest -n auto tests
+```
+
 ## Структура проекта
 
 ```bash
