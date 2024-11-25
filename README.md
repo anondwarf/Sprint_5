@@ -31,6 +31,8 @@ UI тестирование сайта [stellarburgers.nomoreparties.site](https
       - [`test_main_page_login_link`](#test_main_page_login_link)
       - [`test_account_profile_page_constructor_link`](#test_account_profile_page_constructor_link)
       - [`test_account_profile_page_logo`](#test_account_profile_page_logo)
+    - [`TestAccountExit`](#testaccountexit)
+      - [`test_exit_account`](#test_exit_account)
 
 ## Запуск проекта
 
@@ -150,3 +152,9 @@ UI тестирование сайта [stellarburgers.nomoreparties.site](https
 #### `test_account_profile_page_logo`
 
 Проверка перехода по ссылке из лого в шапке сайта со страницы профиля аккаунта на главную страницу
+
+### `TestAccountExit`
+
+#### `test_exit_account`
+
+Проверка выхода из аккаунта
