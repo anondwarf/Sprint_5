@@ -18,3 +18,6 @@ class Locators:
     FORGOT_PASS_ENTER_LINK: str = '//*[@id="root"]/div/main/div/div/p/a'
     REGISTRATION_ENTER_LINK: str = '//*[@id="root"]/div/main/div/div/p/a'
     HEADER_ENTER_LINK: str = '//*[@id="root"]/div/header/nav/a'
+    ACCOUNT_PROFILE_EXIT_BUTTON: str = (
+        '//*[@id="root"]/div/main/div/nav/ul/li[3]/button'
+    )

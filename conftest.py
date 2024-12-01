@@ -1,6 +1,7 @@
 # coding=utf-8
 import pytest
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 from src.utils import UtilsForTests
 
