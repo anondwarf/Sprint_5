@@ -10,28 +10,30 @@ class TestRegistration:
     LOGIN_URL: str = "https://stellarburgers.nomoreparties.site/login"
 
     @pytest.mark.parametrize(
-        "username,email,password", [("pupa", "lupa@pupa.com", "password")]
+        "random_string, random_email, random_password", [(5, 10, 7)]
     )
-    def test_registration_good_param(self, driver, username, email, password):
+    def test_registration_good_param(
+        self, driver, random_string, random_email, random_password
+    ):
 
         driver.get(TestRegistration.REGISTRATION_URL)
         driver.find_element(By.XPATH, Locators.REGISTRATION_NAME_INPUT).send_keys(
-            username
+            random_string
         )
         driver.find_element(By.XPATH, Locators.REGISTRATION_EMAIL_INPUT).send_keys(
-            email
+            random_email
         )
         driver.find_element(By.XPATH, Locators.REGISTRATION_PASSWORD_INPUT).send_keys(
-            password
+            random_password
         )
         driver.find_element(By.XPATH, Locators.REGISTRATION_BUTTON).click()
         assert driver.current_url == TestRegistration.REGISTRATION_URL
 
-    @pytest.mark.parametrize("password", ["1234"])
-    def test_registration_bad_param(self, driver, password):
+    @pytest.mark.parametrize("random_password", [4])
+    def test_registration_bad_param(self, driver, random_password):
         driver.get(TestRegistration.REGISTRATION_URL)
         driver.find_element(By.XPATH, Locators.REGISTRATION_PASSWORD_INPUT).send_keys(
-            password
+            random_password
         )
         driver.find_element(By.XPATH, Locators.REGISTRATION_BUTTON).click()
         element = driver.find_element(By.XPATH, Locators.REGISTRATION_ERROR_PASSWORD)
