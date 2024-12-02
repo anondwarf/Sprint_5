@@ -13,15 +13,13 @@ class TestAccountProfile:
 
     def test_redirect_main_to_account_profile(self, driver):
         driver.get(TestAccountProfile.LOGIN_PAGE)
-        driver.find_element(
-            By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/input'
-        ).send_keys("antonbogomolov12a1234@ya.ru")
-        driver.find_element(
-            By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div/input'
-        ).send_keys("1234567")
-        driver.find_element(
-            By.XPATH, '//*[@id="root"]/div/main/div/form/button'
-        ).click()
+        driver.find_element(By.XPATH, Locators.LOGIN_EMAIL_INPUT).send_keys(
+            "antonbogomolov12a1234@ya.ru"
+        )
+        driver.find_element(By.XPATH, Locators.LOGIN_PASSWORD_INPUT).send_keys(
+            "1234567"
+        )
+        driver.find_element(By.XPATH, Locators.LOGIN_ENTER_BUTTON).click()
         time.sleep(2)
         driver.get(TestAccountProfile.MAIN_PAGE)
         driver.find_element(By.XPATH, Locators.HEADER_ENTER_LINK).click()
@@ -30,15 +28,13 @@ class TestAccountProfile:
 
     def test_exit_account_profile(self, driver):
         driver.get(TestAccountProfile.LOGIN_PAGE)
-        driver.find_element(
-            By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/input'
-        ).send_keys("antonbogomolov12a1234@ya.ru")
-        driver.find_element(
-            By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div/input'
-        ).send_keys("1234567")
-        driver.find_element(
-            By.XPATH, '//*[@id="root"]/div/main/div/form/button'
-        ).click()
+        driver.find_element(By.XPATH, Locators.LOGIN_EMAIL_INPUT).send_keys(
+            "antonbogomolov12a1234@ya.ru"
+        )
+        driver.find_element(By.XPATH, Locators.LOGIN_PASSWORD_INPUT).send_keys(
+            "1234567"
+        )
+        driver.find_element(By.XPATH, Locators.LOGIN_ENTER_BUTTON).click()
         driver.find_element(By.XPATH, Locators.HEADER_ENTER_LINK).click()
         time.sleep(2)
         driver.find_element(By.XPATH, Locators.ACCOUNT_PROFILE_EXIT_BUTTON).click()

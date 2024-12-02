@@ -6,10 +6,9 @@ from selenium.webdriver.common.by import By
 from src.utils import UtilsForTests
 
 
-@pytest.fixture(autouse=True)
-def driver(request):
+@pytest.fixture
+def driver():
     driver = webdriver.Chrome()
-    request.cls.driver = driver
     yield driver
     driver.quit()
 

@@ -2,28 +2,31 @@
 class Locators:
 
     REGISTRATION_NAME_INPUT: str = (
-        '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/input'
+        '//label[contains(text(), "Имя")]/following-sibling::input'
     )
     REGISTRATION_EMAIL_INPUT: str = (
-        '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div/input'
+        '//label[contains(text(), "Email")]/following-sibling::input'
     )
     REGISTRATION_PASSWORD_INPUT: str = (
-        '//*[@id="root"]/div/main/div/form/fieldset[3]/div/div/input'
+        '//label[contains(text(), "Пароль")]/following-sibling::input'
     )
     REGISTRATION_BUTTON: str = '//*[@id="root"]/div/main/div/form/button'
-    REGISTRATION_ERROR_PASSWORD: str = (
-        '//*[@id="root"]/div/main/div/form/fieldset[3]/div/p'
-    )
-    MAIN_ENTER_ACCOUNT_BUTTON: str = '//*[@id="root"]/div/main/section[2]/div/button'
+    REGISTRATION_ERROR_PASSWORD: str = '//p[contains(text(), "Некорректный пароль")]'
+    MAIN_ENTER_ACCOUNT_BUTTON: str = '//button[contains(text(), "Войти")]'
     FORGOT_PASS_ENTER_LINK: str = '//*[@id="root"]/div/main/div/div/p/a'
     REGISTRATION_ENTER_LINK: str = '//*[@id="root"]/div/main/div/div/p/a'
     HEADER_ENTER_LINK: str = '//*[@id="root"]/div/header/nav/a'
-    ACCOUNT_PROFILE_EXIT_BUTTON: str = (
-        '//*[@id="root"]/div/main/div/nav/ul/li[3]/button'
+    ACCOUNT_PROFILE_EXIT_BUTTON: str = '//button[contains(text(), "Выход")]'
+    MAIN_TOPPING_TAB: str = '//span[contains(text(), "Начинки")]/parent::*'
+    MAIN_TOPPING_HEADER: str = '//h2[contains(text(), "Начинки")]'
+    MAIN_SAUCES_TAB: str = '//span[contains(text(), "Соусы")]/parent::*'
+    MAIN_SAUCES_HEADER: str = '//h2[contains(text(), "Соусы")]'
+    MAIN_BREAD_TAB: str = '//span[contains(text(), "Булки")]/parent::*'
+    MAIN_BREAD_HEADER: str = '//h2[contains(text(), "Булки")]'
+    LOGIN_EMAIL_INPUT: str = (
+        '//label[contains(text(), "Email")]/following-sibling::input'
     )
-    MAIN_TOPPING_TAB: str = '//*[@id="root"]/div/main/section[1]/div[1]/div[3]'
-    MAIN_TOPPING_HEADER: str = '//*[@id="root"]/div/main/section[1]/div[2]/h2[3]'
-    MAIN_SAUCES_TAB: str = '//*[@id="root"]/div/main/section[1]/div[1]/div[2]'
-    MAIN_SAUCES_HEADER: str = '//*[@id="root"]/div/main/section[1]/div[2]/h2[2]'
-    MAIN_BREAD_TAB: str = '//*[@id="root"]/div/main/section[1]/div[1]/div[1]'
-    MAIN_BREAD_HEADER: str = '//*[@id="root"]/div/main/section[1]/div[2]/h2[1]'
+    LOGIN_PASSWORD_INPUT: str = (
+        '//label[contains(text(), "Пароль")]/following-sibling::input'
+    )
+    LOGIN_ENTER_BUTTON: str = '//*[@id="root"]/div/main/div/form/button'
